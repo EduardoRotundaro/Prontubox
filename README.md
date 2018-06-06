@@ -8,7 +8,7 @@ Projeto desenvolvido para a disciplina AC-318. Consiste em uma plataforma web,qu
 
 ##**Tecnologias**
 
-![Arquitetura](https://bitbucket.org/EduardoHRotundaro/prontubox/raw/f2302dd112082e833b9d876fd61f0c2b9d0cc9fb/Media/ReadMe/arquitetura.png)
+![Arquitetura](https://raw.githubusercontent.com/EduardoRotundaro/Prontubox/master/Media/ReadMe/arquitetura.png)
 
 ---
 
