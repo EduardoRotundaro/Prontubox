@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="../../media/logo.png">
+		<title>Perfil | ProntuBox</title>
+		<script type"text/javascript" src="../jQuery/jquery.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript" src="../bootstrap/js/bootstrap.js"></script>
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="sidenav">
+			<div class="row" id="logo" data-toggle="tooltip" title="Home"><a href="../home-medico/index.html" class="mx-auto"><img src="../../media/logo.png" alt="Logo" width="45" height="48"></a></div>
+			<div class="row" id="menuItem" data-toggle="tooltip" title="Cadastrar um novo prontuário"><a href="../new-prontuario/index.html" class="btn mx-auto w-100" role="button"><img src="../../media/icons/menu_novo.png" alt="Logo" width="30" height="30"></a></div>
+			<div class="row" id="menuItem" data-toggle="tooltip" title="Meus prontuários"><a href="../list-prontuarios-m/index.html" class="btn mx-auto w-100" role="button"><img src="../../media/icons/menu_prontuarios.png" alt="Logo" width="35" height="35"></a></div>
+			<div class="row" id="menuItem" data-toggle="tooltip" title="Procurar um paciente"><a href="../list-pacientes/index.html" class="btn mx-auto w-100" role="button"><img src="../../media/icons/menu_pesquisar.png" alt="Logo" width="30" height="30"></a></div>
+			<div class="row" id="menuItemBottom" data-toggle="tooltip" title="Minha conta"><a href="#" class="btn mx-auto w-100" role="button"><img src="../../media/icons/menu_profile.png" alt="Logo" width="30" height="30"></a></div>
+			<div class="row" id="menuItem" data-toggle="tooltip" title="Sair"><a href="../home/index.html" class="btn mx-auto w-100" role="button"><img src="../../media/icons/menu_logout.png" alt="Logo" width="30" height="30"></a></div>
+		</div>
+		<div class="main">
+			<header id="titulo"><h4>Alterar dados</h4></header>
+			<div id="linha"><svg class="mx-auto" height="30" width="170"><line x1="0" y1="0" x2="900" y2="0" style="stroke:rgb(190,190,190);stroke-width:2" /></svg></div>
+			<header id="inst"><h6>Para alterar algum dado, insira o novo valor no campo desejado e salve.</h6></header>
+			<form>
+				<div><label id="input">Nome:</label></div>
+				<div id="field" class="form-group"><input type="text" class="form-control" id="name" placeholder=""></div>
+				<div><label id="input">Cidade:</label></div>
+				<div id="field" class="form-group"><input type="text" class="form-control" id="cidade" placeholder=""></div>
+				<div id="field" class="form-group">
+					<div><label id="input" for="sel1">Estado:</label></div>
+					<select class="form-control" id="estado">
+						<option value="AC">AC</option><option value="AL">AL</option><option value="AP">AP</option><option value="AM">AM</option>
+						<option value="BA">BA</option><option value="CE">CE</option><option value="DF">DF</option><option value="ES">ES</option>
+						<option value="GO">GO</option><option value="MA">MA</option><option value="MT">MT</option><option value="MS">MS</option>
+						<option value="MG">MG</option><option value="PA">PA</option><option value="PB">PB</option><option value="PR">PR</option>
+						<option value="PE">PE</option><option value="PI">PI</option><option value="RJ">RJ</option><option value="RN">RN</option>
+						<option value="RS">RS</option><option value="RO">RO</option><option value="RR">RR</option><option value="SC">SC</option>
+						<option value="SP">SP</option><option value="SE">SE</option><option value="TO">TO</option>
+					</select>
+				</div>
+				<div><label id="input">Local de trabalho:</label></div>
+				<div id="field" class="form-group"><input type="text" class="form-control" id="localTrab" placeholder=""></div>
+				<div><label id="input">E-mail:</label></div>
+				<div id="field" class="form-group"><input type="email" class="form-control" id="email" placeholder=""></div>
+				<header id="tituloSenha"><h6><b>Alterar a senha</b></h6></header>
+				<div><svg class="mx-auto" height="30" width="150"><line x1="0" y1="0" x2="900" y2="0" style="stroke:rgb(190,190,190);stroke-width:2" /></svg></div>
+				<div><label id="input">Nova senha:</label></div>
+				<div id="field" class="form-group"><input type="password" class="form-control" id="senha"></div>
+				<div><label id="input">Confirme a senha:</label></div>
+				<div id="field" class="form-group"><input type="password" class="form-control" id="senhaC"></div>
+				<div><label id="input">Senha antiga:</label></div>
+				<div id="field" class="form-group"><input type="password" class="form-control" id="senhaAnt"></div>
+			</form>
+			<div id="botoes">
+				<input id="botaoOk" type="button" class="btn btn-info" value="Salvar" onclick="salvar()">
+				<a id="botaoC" href="../home-medico/index.html" class="btn btn-secondary" role="button">Cancelar</a>
+			</div>
+		</div>
+	</body>
+</html>

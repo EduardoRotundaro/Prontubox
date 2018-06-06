@@ -1,0 +1,35 @@
+body{
+  background-color: rgb(242, 245, 255);
+}
+
+#logo{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#novaContaLable{
+  font-size: 20px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  color: rgb(68, 75, 89);
+}
+
+#input{
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+#rodape{
+  font-size: 14px;
+  margin-top: 150px;
+  background-color: rgb(22, 28, 39);
+  color: rgb(53, 192, 214);
+}
+
+a{
+  color: rgb(255,255,255);
+}
+
+#voltarBtn{
+  margin-top: 15px;
+}

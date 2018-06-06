@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="../../media/logo.png">
+		<title>Home | ProntuBox</title>
+		<script type"text/javascript" src="../jQuery/jquery.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript" src="../bootstrap/js/bootstrap.js"></script>
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="sidenav">
+			<div class="row" id="logo"><img class="mx-auto" src="../../media/logo.png" alt="Logo" width="45" height="48"></div>
+			<div class="row" id="menuItem" data-toggle="tooltip" title="Ver meus prontuários"><a href="../list-prontuarios-p/index.html" class="btn mx-auto w-100" role="button"><img src="../../media/icons/menu_prontuarios.png" alt="Logo" width="35" height="35"></a></div>
+			<div class="row" id="menuItem" data-toggle="tooltip" title="Pesquisar médicos"><a href="../list-medicos/index.html" class="btn mx-auto w-100" role="button"><img src="../../media/icons/menu_pesquisar.png" alt="Logo" width="30" height="30"></a></div>
+			<div class="row" id="menuItemBottom" data-toggle="tooltip" title="Minha conta"><a href="../profile-paciente/index.html" class="btn mx-auto w-100" role="button"><img src="../../media/icons/menu_profile.png" alt="Logo" width="30" height="30"></a></div>
+			<div class="row" id="menuItem" data-toggle="tooltip" title="Sair"><a href="../home/index.html" class="btn mx-auto w-100" role="button"><img src="../../media/icons/menu_logout.png" alt="Logo" width="30" height="30"></a></div>
+		</div>
+		<div class="main">
+			<header id="helloMsg"></header>
+			<div><svg class="mx-auto" height="30" width="600"><line x1="0" y1="0" x2="900" y2="0" style="stroke:rgb(190,190,190);stroke-width:2" /></svg></div>
+			<div>
+				<a id="opcao" class="btn btn-info" href="../list-medicos/index.html" data-toggle="tooltip" title="Procurar médicos"><img id="opcImg" class="float-right" src="../../media/icons/doctors.png" alt="Prontuários" width="100" height="100"><h5><b>Médicos</b></h5></a>
+				<a id="opcao" class="btn btn-info" href="../list-prontuarios-p/index.html" data-toggle="tooltip" title="Ver meus prontuários"><img id="opcImg" class="float-right" src="../../media/icons/prontuarios.png" alt="Prontuários" width="100" height="100"><h5><b>Prontuários</b></h5></a>
+			</div>
+			<footer id="rodape" class="page-footer">
+				<div class="footer-copyright text-center">© 2018 Copyright: ProntuBox</div>
+			</footer>
+		</div>
+	</body>
+</html>

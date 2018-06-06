@@ -1,0 +1,80 @@
+body{
+  background-color: rgb(242, 245, 255);
+}
+
+.sidenav {
+    height: 100%;
+    width: 68px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 82, 104);
+    overflow-x: hidden;
+    padding-top: 10px;
+    border-style: solid;
+    border-width: 0px 3px 0px 0px;
+    border-color: rgb(230, 230, 255);
+}
+
+#logo{
+  margin-bottom: 40px;
+}
+
+#menuItem{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#menuItemBottom{
+  margin-top: 280px;
+}
+
+.main {
+    margin-left: 160px;
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+h4{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: rgb(68, 75, 89);
+}
+
+#botao{
+  width: 100px;
+}
+
+#aviso{
+  margin-top: 30px;
+  width: 800px;
+}
+
+#accordion{
+  margin-top: 15px;
+  width: 800px;
+}
+#prontuarios{
+  margin-top: 20px;
+}
+
+.card-header{
+  background-color: rgb(168, 197, 208);
+}
+
+.card-header a{
+  color: rgb(68, 75, 89);
+}
+
+#rodape{
+  margin-top: 40px;
+}
+
+#prontuariosL{
+  margin-top: 30px;
+  color: rgb(68, 75, 89);
+}

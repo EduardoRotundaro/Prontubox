@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="../../media/logo.png">
+		<title>Pacientes | ProntuBox</title>
+		<script type"text/javascript" src="../jQuery/jquery.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript" src="../bootstrap/js/bootstrap.js"></script>
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="sidenav">
+			<div class="row" id="logo" data-toggle="tooltip" title="Home"><a href="../home-medico/index.html" class="mx-auto"><img src="../../media/logo.png" alt="Logo" width="45" height="48"></a></div>
+			<div class="row" id="menuItem" data-toggle="tooltip" title="Criar novo prontuário"><a href="../new-prontuario/index.html" class="btn mx-auto w-100" role="button"><img src="../../media/icons/menu_novo.png" alt="Logo" width="30" height="30"></a></div>
+			<div class="row" id="menuItem" data-toggle="tooltip" title="Ver meus prontuários"><a href="../list-prontuarios-m/index.html" class="btn mx-auto w-100" role="button"><img src="../../media/icons/menu_prontuarios.png" alt="Logo" width="35" height="35"></a></div>
+			<div class="row" id="menuItem" data-toggle="tooltip" title="Procurar um paciente"><a href="#" class="btn mx-auto w-100" role="button"><img src="../../media/icons/menu_pesquisar.png" alt="Logo" width="30" height="30"></a></div>
+			<div class="row" id="menuItemBottom" data-toggle="tooltip" title="Minha conta"><a href="../profile-medico/index.html" class="btn mx-auto w-100" role="button"><img src="../../media/icons/menu_profile.png" alt="Logo" width="30" height="30"></a></div>
+			<div class="row" id="menuItem" data-toggle="tooltip" title="Sair"><a href="../home/index.html" class="btn mx-auto w-100" role="button"><img src="../../media/icons/menu_logout.png" alt="Logo" width="30" height="30"></a></div>
+		</div>
+		<div class="main">
+			<header id="titulo"><h4>Pacientes</h4></header>
+			<div><svg class="mx-auto" height="30" width="120"><line x1="0" y1="0" x2="900" y2="0" style="stroke:rgb(190,190,190);stroke-width:2" /></svg></div>
+			<form>
+				<div><label id="input">Digite o CPF:</label></div>
+				<div><input type="search" class="form-control" id="searchPaciente" placeholder="Exemplo: 111.222.333-44" autofocus autocomplete="on"></div>
+				<div>
+					<input id="botao" type="button" class="btn btn-info" value="Procurar" onclick="procurar()">
+					<a id="botao" href="../home-medico/index.html" class="btn btn-secondary" role="button">Voltar</a>
+				</div>
+				<div><svg class="mx-auto" height="30" width="800"><line x1="0" y1="25" x2="900" y2="25" style="stroke:rgb(190,190,190);stroke-width:2" /></svg></div>
+				<div id="campoderesultado"></div>
+			</form>
+		</div>
+	</body>
+</html>

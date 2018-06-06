@@ -1,0 +1,81 @@
+body{
+  background-color: rgb(242, 245, 255);
+}
+
+#logo{
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+#loginLable{
+  font-size: 20px;
+  margin-bottom: 15px;
+  src: url('https://fonts.googleapis.com/css?family=Oswald');
+}
+
+#input{
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+#orLable{
+  font-size: 16px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+#loginArea{
+  margin-bottom: 10px;
+}
+
+#novoUser{
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: rgb(68, 75, 89);
+}
+
+#novaContaImg{
+  margin-right: 15px;
+}
+
+#notMedico{
+  font-size: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: rgb(255, 193, 0);
+}
+
+#rodape{
+  font-size: 14px;
+  background-color: rgb(28, 35, 49);
+  margin-top: 150px;
+}
+
+#footer1{
+  background-color: rgb(28, 35, 49);
+  color: rgb(255, 255, 255);
+  margin-top: 150px;
+  font-size: 12px;
+}
+
+#footer2{
+  background-color: rgb(22, 28, 39);
+  color: rgb(53, 192, 214);
+}
+#linha{
+  border-color: rgb(0, 153, 171);
+}
+#icone{
+  margin-right: 5px;
+}
+a{
+  color: rgb(255, 255, 255);
+}
+
+#loginLable{
+  color: rgb(68, 75, 89);
+}
+
+#orLable{
+  color: rgb(68, 75, 89);
+}

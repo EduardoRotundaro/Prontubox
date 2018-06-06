@@ -1,0 +1,69 @@
+body{
+  background-color: rgb(242, 245, 255);
+}
+
+.sidenav {
+    height: 100%;
+    width: 68px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 82, 104);
+    overflow-x: hidden;
+    padding-top: 10px;
+    border-style: solid;
+    border-width: 0px 3px 0px 0px;
+    border-color: rgb(230, 230, 255);
+}
+
+#logo{
+  margin-bottom: 40px;
+}
+
+#menuItem{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#menuItemBottom{
+  margin-top: 330px;
+}
+
+.main {
+    margin-left: 160px;
+    padding: 0px 10px;
+}
+
+#opcao{
+  width: 300px;
+  margin-right: 8px;
+  margin-left: 8px;
+  margin-top: 50px;
+
+}
+
+#helloMsg{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: rgb(68, 75, 89);
+}
+
+h5{
+  margin-top: 70px;
+  text-align: left;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+#rodape{
+  font-size: 14px;
+  margin-top: 340px;
+  margin-left: -160px;
+  background-color: rgb(242, 245, 255);
+  color: rgb(53, 192, 214);
+  height: 30px;
+}
