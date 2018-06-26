@@ -2,7 +2,7 @@
 
 **Sobre**
 
-Projeto desenvolvido para a disciplina AC-318. Consiste em uma plataforma web,que vai armazenar prontuários medicos de pacientes, cadastrados por profissionais de saúde. O objetivo é agilizar e melhor a qualidade dos atendimentos médicos.
+Projeto desenvolvido para a disciplina AC-318. Consiste em uma plataforma web,que vai armazenar prontuários médicos de pacientes, cadastrados por profissionais de saúde. O objetivo é agilizar e melhorar a qualidade dos atendimentos médicos.
 
 ---
 

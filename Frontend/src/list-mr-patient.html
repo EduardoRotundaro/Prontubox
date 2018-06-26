@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="../media/logo.png">
+		<title>Meus prontuários | ProntuBox</title>
+		<script type"text/javascript" src="JavaScript/jquery.js"></script>
+		<script type="text/javascript" src="JavaScript/scripts.js"></script>
+		<script type="text/javascript" src="JavaScript/bootstrap.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+		  	$("#m2").mouseenter(function(){ $("#m2").css("box-shadow", "2px 2px 5px gray"); });
+		  	$("#m2").mouseleave(function(){ $("#m2").css("box-shadow", ""); });
+		  	$("#m3").mouseenter(function(){ $("#m3").css("box-shadow", "2px 2px 5px gray"); });
+		  	$("#m3").mouseleave(function(){ $("#m3").css("box-shadow", ""); });
+		  	$("#m4").mouseenter(function(){ $("#m4").css("box-shadow", "2px 2px 5px gray"); });
+		  	$("#m4").mouseleave(function(){ $("#m4").css("box-shadow", ""); });
+		  	$("#m1").css("box-shadow", "2px 2px 5px gray");
+		  	$.ajax({ url: 'http://localhost:5000/prontubox/getSessionData', type: 'GET' })
+		  	.done(function(msg){
+		    	$.ajax({
+		        url: 'http://localhost:5000/prontubox/listProntuarioP',
+		        type: 'POST',
+		        dataType: 'json',
+		        data: { id: msg[0].identificador }
+		    	})
+		    	.done(function(msg){
+		      	if(msg.length==0){
+		        	$("#campoderesultado").html("<div id=\"listMRWarning\" class=\"alert alert-warning\"><strong>Nada!</strong> Você ainda não tem nenhum prontuário cadastrado.</div>");
+		      	}
+		      	else{
+		        	$("#campoderesultado").append("<div id=\"accordionLstMR\"></div>");
+		        	var x = 1;
+		        	$.each(msg, function() {
+		          	$("#accordionLstMR").append("<div class=\"card\"><div id=\"cartao\" class=\"card-header\"><a class=\"card-link\" data-toggle=\"collapse\" href=\"#collapse" + x +"\"><b>" + this.prontuarioData +"</b></a></div><div id=\"collapse" + x + "\" class=\"collapse\" data-parent=\"#accordionLstMR\"><div class=\"card-body\"><b>Médico: </b> Dr. " + this.medicoNome + "<br><b>Diagnóstico: </b>" + this.prontuarioDiagnostico + "</div></div></div>");
+		          	x = x + 1;
+		        	})
+		      	}
+		    	})
+		    	.fail(function(jqXHR, textStatus, msg){ console.log(msg); alert("Ocorreu um erro interno!"); });
+		  	})
+		  	.fail(function(jqXHR, textStatus, msg){ console.log(msg); alert("Ocorreu um erro interno!"); });
+			});
+		</script>
+		<link rel="stylesheet" href="CSS/bootstrap.css">
+		<link rel="stylesheet" href="CSS/styles.css">
+	</head>
+	<body>
+		<div class="sidenav">
+			<div class="row" id="sideLogo" data-toggle="tooltip" title="Home"><a href="home-patient.html" class="mx-auto"><img src="../media/logo.png" alt="Logo" width="50" height="53"></a></div>
+			<div class="row" id="menuItem" data-toggle="tooltip" title="Meus prontuários"><a href="#" class="btn mx-auto w-100" role="button" id="m1"><img src="../media/icons/menu_prontuarios.png" alt="Logo" width="35" height="35"></a></div>
+			<div class="row" id="menuItem" data-toggle="tooltip" title="Procurar médicos"><a href="search-doctor.html" class="btn mx-auto w-100" role="button" id="m2"><img src="../media/icons/menu_pesquisar.png" alt="Logo" width="30" height="30"></a></div>
+			<div class="row" id="menuItemBottomP" data-toggle="tooltip" title="Minha conta"><a href="profile-patient.html" class="btn mx-auto w-100" role="button" id="m3"><img src="../media/icons/menu_profile.png" alt="Logo" width="30" height="30"></a></div>
+			<div class="row" id="menuItem" data-toggle="tooltip" title="Sair"><a href="login.html" class="btn mx-auto w-100" role="button" id="m4"><img src="../media/icons/menu_logout.png" alt="Logo" width="30" height="30"></a></div>
+		</div>
+		<div class="main">
+			<header id="titulo"><h5>Meus prontuários</h5></header>
+			<div><svg class="mx-auto" height="30" width="150"><line x1="0" y1="0" x2="900" y2="0" style="stroke:rgb(190,190,190);stroke-width:2" /></svg></div>
+			<div>
+				<a id="backButtonLstMR" href="home-patient.html" class="btn btn-info" role="button" data-toggle="tooltip" title="Voltar"><img class="mx-auto d-block" src="../media/icons/voltar.png" width="25" height="25"></a>
+			</div>
+			<header id="prontuariosLabel"><h6><b>Prontuários cadastrados:</b></h6></header>
+			<div><svg class="mx-auto" height="10" width="900"><line x1="0" y1="5" x2="800" y2="5" style="stroke:rgb(190,190,190);stroke-width:2" /></svg></div>
+			<div id="campoderesultado"></div>
+			<div id="blankFooter"></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,397 @@
+body{
+  background-color: rgb(242, 245, 255);
+}
+
+a{
+  color: rgb(255, 255, 255);
+}
+
+input:invalid {
+  color: red;
+}
+
+#loginLogo{
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+#loginLable{
+  font-size: 20px;
+  margin-bottom: 15px;
+  src: url('https://fonts.googleapis.com/css?family=Oswald');
+  color: rgb(68, 75, 89);
+}
+
+#input{
+  font-size: 14px;
+  margin-bottom: 2px;
+  color: rgb(68, 75, 89);
+}
+
+#orLable{
+  font-size: 16px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  color: rgb(68, 75, 89);
+}
+
+#loginArea{
+  margin-bottom: 10px;
+}
+
+#novoUser{
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: rgb(68, 75, 89);
+}
+
+#novaContaImg{
+  margin-right: 15px;
+}
+
+#notMedico{
+  font-size: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: rgb(255, 193, 0);
+}
+
+#rodapeLogin{
+  font-size: 14px;
+  background-color: rgb(28, 35, 49);
+  margin-top: 150px;
+}
+
+#footer1Login{
+  background-color: rgb(28, 35, 49);
+  color: rgb(255, 255, 255);
+  margin-top: 120px;
+  font-size: 12px;
+}
+
+#footer2Login{
+  background-color: rgb(22, 28, 39);
+  color: rgb(53, 192, 214);
+}
+
+#lineFooter{
+  border-color: rgb(0, 153, 171);
+}
+
+#iconFooter{
+  margin-right: 5px;
+}
+
+#lgnButton{
+  font-weight: bold;
+}
+
+#sideLogo{
+  margin-bottom: 40px;
+}
+
+#menuItem{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#menuItemBottom{
+  margin-top: 280px;
+}
+
+#menuItemBottomP{
+  margin-top: 328px;
+}
+
+#dashOption{
+  width: 300px;
+  margin-right: 8px;
+  margin-left: 8px;
+  margin-bottom: 35px;
+  box-shadow: 3px 3px 4px grey;
+}
+
+#helloMsg{
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: rgb(68, 75, 89);
+}
+
+#dashOption h5{
+  margin-top: 70px;
+  text-align: left;
+}
+
+#rodapeHome{
+  font-size: 14px;
+  margin-top: 264px;
+  margin-left: -160px;
+  background-color: rgb(242, 245, 255);
+  color: rgb(68, 75, 89);
+  height: 30px;
+}
+
+#lineHomeDoctor{
+  margin-bottom: 25px;
+}
+
+#lineHomePatient{
+  margin-bottom: 25px;
+}
+
+#searchMedico{
+  width: 600px;
+  margin-bottom: 12px;
+}
+
+#titulo h5{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: rgb(68, 75, 89);
+}
+
+#srchButton{
+  width: 294px;
+  margin-right: 8px;
+  margin-bottom: 5px;
+}
+
+#srchWarning{
+  margin-top: 30px;
+  width: 600px;
+}
+
+#accordionDoc{
+  margin-top: 15px;
+  width: 600px;
+}
+
+#blankFooter{
+  margin-top: 40px;
+}
+
+#searchPaciente{
+  width: 600px;
+  margin-bottom: 12px;
+}
+
+#accordionP{
+  margin-top: 20px;
+  width: 600px;
+}
+
+#prontuarios{
+  margin-top: 20px;
+  color: rgb(68, 75, 89);
+}
+
+#accordion2{
+  margin-top: 20px;
+  width: 800px;
+  margin-bottom: 40px;
+}
+
+#backButtonLstMR{
+  margin-top: -35px;
+  width: 100px;
+}
+
+#listMRWarning{
+  margin-top: 30px;
+  width: 800px;
+}
+
+#accordionLstMR{
+  margin-top: 15px;
+  width: 800px;
+}
+
+#prontuariosLabel{
+  margin-top: 20px;
+  margin-bottom: -10px;
+  color: rgb(68, 75, 89);
+}
+
+#logoNewAccount{
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+#novaContaLable{
+  font-size: 20px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  color: rgb(68, 75, 89);
+}
+
+#newAccountFooter{
+  font-size: 14px;
+  margin-top: 80px;
+  background-color: rgb(22, 28, 39);
+  color: rgb(53, 192, 214);
+}
+
+#voltarBtn{
+  margin-top: 15px;
+}
+
+#cardNA{
+  font-size: 18px;
+  color: rgb(68, 75, 89);
+  width: 560px;
+  height: 66px;
+  background-color: rgb(242, 245, 255);
+  margin-bottom: 20px;
+}
+
+#cardNA b{
+  text-align: center;
+  margin-top: -40px;
+}
+
+#newMRSearchButton{
+  width: 300px;
+  margin-right: 8px;
+}
+
+#newMROkButton{
+  width: 300px;
+  margin-right: 8px;
+}
+
+#newMRCancelButton{
+  width: 300px;
+  margin-right: 8px;
+}
+
+#newMRWarning{
+  margin-top: 10px;
+  width: 600px;
+}
+
+#accordionNewMR{
+  margin-top: 10px;
+  margin-bottom: 15px;
+  width: 600px;
+}
+
+#CPFField{
+  width: 600px;
+  margin-bottom: 12px;
+}
+
+#dataField{
+  width: 600px;
+  margin-bottom: 10px;
+}
+
+#prontuarioDiagnostico{
+  width: 900px;
+}
+
+#newMRButtons{
+  margin-bottom: 20px;
+}
+
+#aboutFooter{
+  font-size: 14px;
+  color: rgb(68, 75, 89);
+  height: 20px;
+}
+
+#aboutTop{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+#profileOKButton{
+  width: 294px;
+  margin-right: 8px;
+}
+
+#profileCancelButton{
+  width: 294px;
+  margin-right: 8px;
+}
+
+#aviso{
+  width: 600px;
+}
+
+#avisoSucesso{
+  width: 600px;
+  margin-top: 30px;
+}
+
+#field{
+  width: 600px;
+  margin-bottom: 12px;
+}
+
+#tituloSenha{
+  margin-top: 35px;
+  color: rgb(68, 75, 89);
+}
+
+#profileButtons{
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+#inst{
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: rgb(68, 75, 89);
+}
+
+.confirmDeleteButton{
+  width: 150px;
+  margin-right: 10px;
+}
+
+.card-header{
+  background-color: rgb(228, 224, 201);
+  box-shadow: 1px 1px 5px grey;
+}
+
+.card-body{
+  background-color: rgb(241, 239, 226);
+}
+
+.card-header a{
+  color: rgb(68, 75, 89);
+}
+
+#loginArea .form-control{
+  width: 380px;
+}
+
+#loginMainDiv .btn{
+  width: 380px;
+}
+
+.badge{
+  width: 380px;
+}
+
+.alert{
+  width: 380px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 66px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(221, 228, 255);
+    overflow-x: hidden;
+    padding-top: 10px;
+    box-shadow: 2px 0px 5px grey;
+}
+
+.main {
+    margin-left: 160px;
+    padding: 0px 10px;
+}

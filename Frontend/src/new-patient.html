@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="../media/logo.png">
+		<title>Cadastrar-se | ProntuBox</title>
+		<script type"text/javascript" src="JavaScript/jquery.js"></script>
+		<script type="text/javascript" src="JavaScript/scripts.js"></script>
+		<script type="text/javascript" src="JavaScript/bootstrap.js"></script>
+		<link rel="stylesheet" href="CSS/bootstrap.css">
+		<link rel="stylesheet" href="CSS/styles.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row"><div class="mx-auto"><a href="login.html"><img id="logoNewAccount" src="../media/prontubox.png" alt="Logo" width="388" height="70"></a></div></div>
+			<div class="row"><svg class="mx-auto" height="30" width="200"><line x1="0" y1="0" x2="300" y2="0" style="stroke:rgb(190,190,190);stroke-width:2" /></svg></div>
+			<div class="row">
+				<div id="cardNA" class="card mx-auto" data-toggle="tooltip" title="Criar uma nova conta como paciente">
+	  			<img src="../media/icons/new_patient.png" alt="Logo" width="60" height="60"><b>Nova conta</b>
+				</div>
+			</div>
+			<header id="novaContaFailed"></header>
+			<form>
+				<div class="row"><label id="input" class="mx-auto">Nome:</label></div>
+				<div class="form-group"><input maxlength="100" pattern="[a-zA-ZáâãéêíóõúÁÂÃÉÊÍÓÕÚçÇ ]*" type="text" class="form-control w-50 mx-auto" id="pacienteNome" placeholder="Exemplo: Irineu Silva" autofocus></div>
+				<div class="row"><label id="input" class="mx-auto">CPF:</label></div>
+				<div class="form-group"><input maxlength="15" pattern="([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})" type="text" class="form-control w-50 mx-auto" id="pacienteCpf" placeholder="Exemplo: 111.222.333-44"></div>
+				<div class="row"><label id="input" class="mx-auto">Cidade:</label></div>
+				<div class="form-group"><input maxlength="100" pattern="[a-zA-ZáâãéêíóõúÁÂÃÉÊÍÓÕÚçÇ ]*" type="text" class="form-control w-50 mx-auto" id="pacienteCidade" placeholder="Exemplo: Santa Rita do Sapucaí"></div>
+				<div class="form-group">
+					<div class="row"><label id="input" for="sel1" class="mx-auto">Estado:</label></div>
+					<select class="form-control mx-auto w-50" id="pacienteEstado">
+						<option value="AC">AC</option><option value="AL">AL</option><option value="AP">AP</option><option value="AM">AM</option>
+						<option value="BA">BA</option><option value="CE">CE</option><option value="DF">DF</option><option value="ES">ES</option>
+						<option value="GO">GO</option><option value="MA">MA</option><option value="MT">MT</option><option value="MS">MS</option>
+						<option value="MG">MG</option><option value="PA">PA</option><option value="PB">PB</option><option value="PR">PR</option>
+						<option value="PE">PE</option><option value="PI">PI</option><option value="RJ">RJ</option><option value="RN">RN</option>
+						<option value="RS">RS</option><option value="RO">RO</option><option value="RR">RR</option><option value="SC">SC</option>
+						<option value="SP">SP</option><option value="SE">SE</option><option value="TO">TO</option>
+					</select>
+				</div>
+				<div class="row"><label id="input" class="mx-auto">Data de nascimento:</label></div>
+				<div class="form-group"><input type="date" class="form-control w-50 mx-auto" id="pacienteDataNascimento"></div>
+				<div class="row"><label id="input" class="mx-auto">E-mail:</label></div>
+				<div class="form-group"><input maxlength="254" type="email" class="form-control w-50 mx-auto" id="pacienteEmail" placeholder="Exemplo: meunome@zmail.com"></div>
+				<div class="row"><label id="input" class="mx-auto">Senha:</label></div>
+				<div class="row"><label id="input" class="mx-auto">(<b>Pelo menos 8 caracteres, contendo um número, uma letra e um caracter especial</b>)</label></div>
+				<div class="form-group"><input maxlength="50" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?])[A-Za-z\d$@$!%*#?]{8,}$" type="password" class="form-control w-50 mx-auto" id="pacienteSenha" placeholder="Exemplo: ***********"></div>
+				<div class="row"><label id="input" class="mx-auto">Confirme a senha:</label></div>
+				<div class="form-group"><input maxlength="50" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?])[A-Za-z\d$@$!%*#?]{8,}$" type="password" class="form-control w-50 mx-auto" id="pacienteSenhaC" placeholder="***********"></div>
+				<div id="confirmarBtn" class="row"><input type="button" class="btn btn-info w-50 mx-auto" value="Confirmar" onclick="registerPatient()" data-toggle="tooltip" title="Confirmar os dados e criar uma nova conta"></div>
+				<div id="voltarBtn" class="row"><a href="login.html" class="btn btn-secondary w-50 mx-auto" role="button" data-toggle="tooltip" title="Cancelar e voltar para a página de login">Voltar</a></div>
+			</form>
+		</div>
+		<footer id="newAccountFooter" class="page-footer">
+			<div class="footer-copyright text-center py-2">© 2018 Copyright:
+				<a href="login.html"> ProntuBox</a>
+			</div>
+		</footer>
+	</body>
+</html>

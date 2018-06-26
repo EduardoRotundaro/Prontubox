@@ -1,11 +1,9 @@
-//Carregamento de módulos
 var express = require('express');
 var cors = require('cors');
 var app = express();
 var bodyParser = require('body-parser');
 var mysql = require('mysql');
 
-//Configuração do banco de dados
 var dbConfig = {
         host    : 'localhost',
         user    : 'root',
@@ -14,7 +12,6 @@ var dbConfig = {
         database: 'prontubox'
 };
 
-//Teste de conexão com o BD
 var test = mysql.createConnection(dbConfig);
 test.connect(function(err){
   if(err){
@@ -29,14 +26,10 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// Definição da porta da aplicação
 var port = process.env.PORT || 5000;
 
 var prontuBox = express.Router();
 
-// ---------------- Rotas ----------------
-
-//-------------------------------------------------------------------------------------------------------------------------------------
 prontuBox.post('/newMedico', function(req, res) {
   var idMedico = req.body.idmedico;
   var name = req.body.medicoNome;
@@ -67,9 +60,7 @@ prontuBox.post('/newMedico', function(req, res) {
 	});
   connection.end();
 });
-//-------------------------------------------------------------------------------------------------------------------------------------
 
-//-------------------------------------------------------------------------------------------------------------------------------------
 prontuBox.post('/newPaciente', function(req, res) {
   var pacienteId = req.body.idpaciente;
 	var name = req.body.pacienteNome;
@@ -97,9 +88,7 @@ prontuBox.post('/newPaciente', function(req, res) {
 	});
   connection.end();
 });
-//-------------------------------------------------------------------------------------------------------------------------------------
 
-//-------------------------------------------------------------------------------------------------------------------------------------
 prontuBox.post('/newProntuario', function(req, res) {
 	var medicoId = req.body.medico;
 	var pacienteId = req.body.paciente;
@@ -118,14 +107,12 @@ prontuBox.post('/newProntuario', function(req, res) {
 		}
 		else {
 			console.log('i: [QUERY] Insert failed - Table prontuario');
-			res.jsonp(err);
+      res.jsonp(err);
 		}
 	});
   connection.end();
 });
-//-------------------------------------------------------------------------------------------------------------------------------------
 
-//-------------------------------------------------------------------------------------------------------------------------------------
 prontuBox.post('/updateMedico', function(req, res) {
 	var id = req.body.idM;
 	var name = req.body.nameM;
@@ -151,7 +138,6 @@ prontuBox.post('/updateMedico', function(req, res) {
 	});
   connection.end();
 });
-//-------------------------------------------------------------------------------------------------------------------------------------
 
 prontuBox.post('/updatePaciente', function(req, res) {
   var id  = req.body.idP;
@@ -178,7 +164,6 @@ prontuBox.post('/updatePaciente', function(req, res) {
   connection.end();
 });
 
-//-------------------------------------------------------------------------------------------------------------------------------------
 prontuBox.post('/getByIdMedico', function(req, res) {
   var id = req.body.id;
   var strQuery = "SELECT * FROM medico WHERE idmedico = '" + id + "'";
@@ -197,9 +182,7 @@ prontuBox.post('/getByIdMedico', function(req, res) {
   });
   connection.end();
 });
-//-------------------------------------------------------------------------------------------------------------------------------------
 
-//-------------------------------------------------------------------------------------------------------------------------------------
 prontuBox.post('/loginMedico', function(req, res) {
   var email = req.body.email;
   var senha = req.body.senha;
@@ -219,9 +202,7 @@ prontuBox.post('/loginMedico', function(req, res) {
   });
   connection.end();
 });
-//-------------------------------------------------------------------------------------------------------------------------------------
 
-//-------------------------------------------------------------------------------------------------------------------------------------
 prontuBox.post('/verificaEmail', function(req, res) {
   var email = req.body.email;
   var strQuery = "SELECT * FROM medico WHERE medicoEmail = '" + email + "'";
@@ -240,9 +221,7 @@ prontuBox.post('/verificaEmail', function(req, res) {
   });
   connection.end();
 });
-//-------------------------------------------------------------------------------------------------------------------------------------
 
-//-------------------------------------------------------------------------------------------------------------------------------------
 prontuBox.post('/verificaEmailP', function(req, res) {
   var email = req.body.email;
   var strQuery = "SELECT * FROM paciente WHERE pacienteEmail = '" + email + "'";
@@ -261,9 +240,7 @@ prontuBox.post('/verificaEmailP', function(req, res) {
   });
   connection.end();
 });
-//-------------------------------------------------------------------------------------------------------------------------------------
 
-//-------------------------------------------------------------------------------------------------------------------------------------
 prontuBox.post('/getByIdPaciente', function(req, res) {
   var id = req.body.id;
   var strQuery = "SELECT * FROM paciente WHERE idpaciente = '" + id+ "';";
@@ -282,9 +259,7 @@ prontuBox.post('/getByIdPaciente', function(req, res) {
   });
   connection.end();
 });
-//-------------------------------------------------------------------------------------------------------------------------------------
 
-//-------------------------------------------------------------------------------------------------------------------------------------
 prontuBox.post('/listProntuarioM', function(req, res) {
   var id = req.body.id;
   var strQuery = "SELECT * FROM prontuario INNER JOIN paciente ON prontuario.paciente_idpaciente = paciente.idpaciente WHERE prontuario.medico_idmedico = '" + id +"'; ";
@@ -303,9 +278,7 @@ prontuBox.post('/listProntuarioM', function(req, res) {
   });
   connection.end();
 });
-//-------------------------------------------------------------------------------------------------------------------------------------
 
-//-------------------------------------------------------------------------------------------------------------------------------------
 prontuBox.post('/listProntuarioP', function(req, res) {
   var id = req.body.id;
   var strQuery = "SELECT * FROM prontuario INNER JOIN medico ON prontuario.medico_idmedico = medico.idmedico WHERE prontuario.paciente_idpaciente = '" + id + "'; ";
@@ -324,9 +297,7 @@ prontuBox.post('/listProntuarioP', function(req, res) {
   });
   connection.end();
 });
-//-------------------------------------------------------------------------------------------------------------------------------------
 
-//-------------------------------------------------------------------------------------------------------------------------------------
 prontuBox.post('/loginPaciente', function(req, res) {
   var email = req.body.email;
   var senha = req.body.senha;
@@ -346,9 +317,7 @@ prontuBox.post('/loginPaciente', function(req, res) {
   });
   connection.end();
 });
-//-------------------------------------------------------------------------------------------------------------------------------------
 
-//-------------------------------------------------------------------------------------------------------------------------------------
 prontuBox.post('/getByIdPProntuario', function(req, res) {
   var id = req.body.id;
   var strQuery = "SELECT * FROM prontuario WHERE paciente_idpaciente = '" + id + "'";
@@ -367,9 +336,7 @@ prontuBox.post('/getByIdPProntuario', function(req, res) {
   });
   connection.end();
 });
-//-------------------------------------------------------------------------------------------------------------------------------------
 
-//-------------------------------------------------------------------------------------------------------------------------------------
 prontuBox.post('/getByIdMProntuario', function(req, res) {
   var id = req.body.id;
   var strQuery = "SELECT * FROM prontuario WHERE medico_idmedico = '" + id + "'";
@@ -388,7 +355,6 @@ prontuBox.post('/getByIdMProntuario', function(req, res) {
   });
   connection.end();
 });
-//-------------------------------------------------------------------------------------------------------------------------------------
 
 prontuBox.post('/removeProntuario', function(req, res) {
   var id = req.body.id;
@@ -400,11 +366,11 @@ prontuBox.post('/removeProntuario', function(req, res) {
 
   connection.query(strQuery, function(err, rows, fields) {
     if (!err) {
-      console.log('i: [CRUD] Delete failed - Table prontuario');
+      console.log('i: [QUERY] Delete successful - Table prontuario');
       res.jsonp(rows);
     }
     else {
-      console.log('i: [CRUD] Delete successful - Table prontuario');
+      console.log('i: [QUERY] Delete failed - Table prontuario');
       res.jsonp(err);
     }
   });
@@ -412,7 +378,6 @@ prontuBox.post('/removeProntuario', function(req, res) {
   connection.end();
 });
 
-//-------------------------------------------------------------------------------------------------------------------------------------
 prontuBox.get('/countMedico', function(req, res) {
   var strQuery = "SELECT count(idmedico) AS quant FROM medico";
   var connection = mysql.createConnection(dbConfig);
@@ -430,9 +395,7 @@ prontuBox.get('/countMedico', function(req, res) {
   });
   connection.end();
 });
-//-------------------------------------------------------------------------------------------------------------------------------------
 
-//-------------------------------------------------------------------------------------------------------------------------------------
 prontuBox.get('/countPaciente', function(req, res) {
   var strQuery = "SELECT count(idpaciente) AS quant FROM paciente";
   var connection = mysql.createConnection(dbConfig);
@@ -451,9 +414,7 @@ prontuBox.get('/countPaciente', function(req, res) {
   });
   connection.end();
 });
-//-------------------------------------------------------------------------------------------------------------------------------------
 
-//-------------------------------------------------------------------------------------------------------------------------------------
 prontuBox.get('/countProntuario', function(req, res) {
   var strQuery = "SELECT count(prontuarioId) AS quant FROM prontuario";
   var connection = mysql.createConnection(dbConfig);
@@ -471,9 +432,7 @@ prontuBox.get('/countProntuario', function(req, res) {
   });
   connection.end();
 });
-//-------------------------------------------------------------------------------------------------------------------------------------
 
-//-------------------------------------------------------------------------------------------------------------------------------------
 prontuBox.post('/prontuariosPaciente', function(req, res) {
   var  id = req.body.id;
   var strQuery = "SELECT * FROM prontuario WHERE paciente_idpaciente = '" + id +  "'";
@@ -492,9 +451,7 @@ prontuBox.post('/prontuariosPaciente', function(req, res) {
   });
   connection.end();
 });
-//-------------------------------------------------------------------------------------------------------------------------------------
 
-//-------------------------------------------------------------------------------------------------------------------------------------
 prontuBox.post('/searchPaciente', function(req, res) {
   var cpf = req.body.cpf;
   var strQuery = "SELECT * FROM paciente WHERE pacienteCpf = '" + cpf +  "'";
@@ -513,9 +470,7 @@ prontuBox.post('/searchPaciente', function(req, res) {
   });
   connection.end();
 });
-//-------------------------------------------------------------------------------------------------------------------------------------
 
-//-------------------------------------------------------------------------------------------------------------------------------------
 prontuBox.post('/searchMedico', function(req, res) {
   var name = req.body.nome;
   var strQuery = "SELECT * FROM medico WHERE medicoNome LIKE '%" + name +  "%';";
@@ -534,9 +489,7 @@ prontuBox.post('/searchMedico', function(req, res) {
   });
   connection.end();
 });
-//-------------------------------------------------------------------------------------------------------------------------------------
 
-//-------------------------------------------------------------------------------------------------------------------------------------
 prontuBox.get('/getSessionData', function(req, res) {
   var strQuery = "SELECT * FROM sessao";
   var connection = mysql.createConnection(dbConfig);
@@ -554,9 +507,7 @@ prontuBox.get('/getSessionData', function(req, res) {
   });
   connection.end();
 });
-//-------------------------------------------------------------------------------------------------------------------------------------
 
-//-------------------------------------------------------------------------------------------------------------------------------------
 prontuBox.post('/updateSessionData', function(req, res) {
   var tipo = req.body.tipo;
   var id = req.body.identificador;
@@ -579,7 +530,6 @@ prontuBox.post('/updateSessionData', function(req, res) {
   });
   connection.end();
 });
-//-------------------------------------------------------------------------------------------------------------------------------------
 
 app.use('/prontubox', prontuBox);
 
